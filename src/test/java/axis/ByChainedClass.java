@@ -25,9 +25,9 @@ public class ByChainedClass {
 		By by4 = By.className("c4");
 		WebElement ele = driver.findElement(new ByChained(by1,by2,by3,by4));
 		ele.sendKeys("gender concept");
-		Thread.sleep(3000);
+		Thread.sleep(30000);
 		driver.manage().deleteAllCookies();
-		Thread.sleep(2000);
+		Thread.sleep(20000);
 		driver.close();
 	}
 

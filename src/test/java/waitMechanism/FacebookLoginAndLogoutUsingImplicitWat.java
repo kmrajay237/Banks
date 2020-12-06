@@ -20,10 +20,10 @@ public class FacebookLoginAndLogoutUsingImplicitWat {
 		driver.get("https://www.facebook.com/");
 		
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("kmrajay237@gmail.com");
+		email.sendKeys("XXXXXXXXXXXXXX");
 		
 		WebElement password = driver.findElement(By.name("pass"));
-		password.sendKeys("Ajay9046933956");
+		password.sendKeys("XXXXXXXXXXXXXXXX");
 		
 		WebElement loginButton = driver.findElement(By.name("login"));
 		loginButton.click();

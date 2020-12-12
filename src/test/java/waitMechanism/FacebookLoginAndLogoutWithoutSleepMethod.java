@@ -15,21 +15,21 @@ public class FacebookLoginAndLogoutWithoutSleepMethod {
 		driver.get("https://www.facebook.com/");
 		
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("XXXXXXXXXXX");
-//		Thread.sleep(5000);
+		email.sendKeys("XXXXXXXXXXXXXXXXX");
+		Thread.sleep(5000);
 		
 		WebElement password = driver.findElement(By.name("pass"));
-		password.sendKeys("XXXXXXXXXXXXX");
-//		Thread.sleep(5000);
+		password.sendKeys("XXXXXXXXXXXXXXX");
+		Thread.sleep(5000);
 		
 		WebElement loginButton = driver.findElement(By.name("login"));
 		loginButton.click();
-//		Thread.sleep(5000);
+		Thread.sleep(5000);
 		
 		WebElement accountDropdown = driver.findElement(By.xpath("//div[@aria-label='Account']"));
 		accountDropdown.click();
 		
-//		Thread.sleep(15000);
+		Thread.sleep(15000);
 		
 		WebElement logout = driver.findElement(By.xpath("//span[text()='Log Out']"));
 		logout.click();

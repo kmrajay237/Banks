@@ -11,16 +11,17 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FacebookLoginAndLogoutUsingExplicitWait {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver=new FirefoxDriver();		
 		driver.get("https://www.facebook.com/");
+		WebDriverWait wait=new WebDriverWait(driver, 30);
 		
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("XXXXXXXXXXXXXXXXX");
+		email.sendKeys("XXXXXXXXXXXXXX");
 		
 		WebElement password = driver.findElement(By.name("pass"));
-		password.sendKeys("XXXXXXXXXXXX");
+		password.sendKeys("XXXXXXXXXXXXXX");
 		
 		WebElement loginButton = driver.findElement(By.name("login"));
 		loginButton.click();
@@ -30,9 +31,9 @@ public class FacebookLoginAndLogoutUsingExplicitWait {
 				
 		WebElement logout = driver.findElement(By.xpath("//span[text()='Log Out']"));
 		
-		WebDriverWait wait=new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(logout));
 		
+		wait.until(ExpectedConditions.elementToBeClickable(logout));
+//		Thread.sleep(3000);
 		logout.click();
 		
 		driver.close();

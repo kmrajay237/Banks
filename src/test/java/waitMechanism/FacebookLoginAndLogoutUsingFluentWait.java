@@ -22,10 +22,10 @@ public class FacebookLoginAndLogoutUsingFluentWait {
 		driver.get("https://www.facebook.com/");
 		
 		WebElement email = driver.findElement(By.id("email"));
-		email.sendKeys("XXXXXXXXXXXX");
+		email.sendKeys("kmrajay237@gmail.com");
 		
 		WebElement password = driver.findElement(By.name("pass"));
-		password.sendKeys("XXXXXXXXXXX");
+		password.sendKeys("Ajay9046933956");
 		
 		WebElement loginButton = driver.findElement(By.name("login"));
 		loginButton.click();
